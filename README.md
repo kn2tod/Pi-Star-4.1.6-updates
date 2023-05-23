@@ -7,6 +7,6 @@ The file(s) included in this repository are provided as a means to seemlessly sw
 
 More to come later.
 
-.\\ark
+Mark
 kn2tod@arrl.net
 
