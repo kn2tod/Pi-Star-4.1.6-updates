@@ -9,7 +9,7 @@ The basics/preliminaries:
 
 Download the installation file, either manually or via GitHub:
 
-rpi-rw
+rpi-rw;
 wget 'https://raw.githubusercontent.com/kn2tod/Pi-Star-4.1.x-Plus/main/GIT-Remote-Set.sh'
 
 Next, run it:
