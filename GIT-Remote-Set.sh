@@ -24,7 +24,7 @@ fi
 
 # recycle tasks after switch?
 
-echo === /usr/local/bin: ==================================================================
+echo === /usr/local/sbin: =================================================================
 cd /usr/local/sbin
 #sudo git remote show origin https://github.com/${pgit}/Pi-Star_Binaries_sbin.git
 sudo git remote set-url origin https://github.com/${pgit}/Pi-Star_Binaries_sbin.git
@@ -46,11 +46,10 @@ echo === /var/www/dashboard: ===================================================
 cd /var/www/dashboard
 #sudo git remote show origin https://github.com/${pgit}/Pi-Star_DV_Dash.git
 sudo git remote set-url origin https://github.com/${pgit}/Pi-Star_DV_Dash.git
-sudo git stash save "save user config files"
+sudo git stash push -m "save Pi-Star user config files" -- config/config.php config/ircddblocal.php config/language.php
 #sudo git pull origin master
 sudo git fetch origin
 sudo git checkout master
-#sudo git stash save "save user config files"
 sudo git reset --hard origin/master
 sudo git stash pop
 
