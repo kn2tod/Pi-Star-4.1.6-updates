@@ -3,7 +3,7 @@ An augmented version of Pi-Star 4.1.x that tracks with the original.
 
 The file(s) included in this repository are provided as a means to seemlessly switch from the native Pi-Star respositories to equivalent (parellel, forked) repositories that include new and extended features.  The intent is to provide incremental improvements and developments in Pi-Star while allowing one to revert to the original (current) Pi-Star with minimum effort and no disruptions.
 
-===============================================================================
+=========================================================================
 
 The main features of this extended release are:
 
@@ -19,13 +19,14 @@ The main features of this extended release are:
 10) Numerous bug fixes + optimization
 11) Prep system for conversion to Bullseye, later version of Python
 
-===============================================================================
+=========================================================================
 
 Installation:
 
 Download the installation file, either manually or via GitHub:
 
-  rpi-rw;
+  rpi-rw
+  
   wget 'https://raw.githubusercontent.com/kn2tod/Pi-Star-4.1.x-Plus/main/GIT-Remote-Set.sh'
 
 Next, run it:
@@ -35,6 +36,7 @@ Next, run it:
 Then, from the expert dashboard, run:
 
   Update
+  
   Upgrade
 
 You won't see much for these two processes, particularily the upgrade process, but the upgrade sets up some background tasks and settings that are required to get the full benefits of the this Pi-Star version.
@@ -47,7 +49,7 @@ In the unlikely situation you decide or need to revert back to the original Pi-S
 
   sudo bash GIT-Remote-Set.sh mw0mwz
 
-===============================================================================
+=========================================================================
 
 (tbc)
 
