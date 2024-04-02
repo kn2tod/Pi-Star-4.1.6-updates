@@ -3,15 +3,17 @@
 fs=$(grep "/dev/root" /proc/mounts | sed -n 's/.*\(r[ow]\).*/\1/p')
 #rpi-rw
 if [ "$fs" == "ro" ]; then
-  sudo mount -o remount,rw / ; sudo mount -o remount,rw /boot
+  sudo mount -o remount,rw / # sudo mount -o remount,rw /boot
 fi
 #
 pgit=${1:-andy}
+pgit=${pgit,,[A-Z]}
 pgit=${pgit/andy/AndyTaylorTweet}
+pgit=${pgit/mw0mwz/AndyTaylorTweet}
 pgit=${pgit/mark/kn2tod}
 echo ${pgit}
 
-# set to make repos updated
+# set to make repos updatable
 if ! grep -q 'safe' /root/.gitconfig > /dev/null 2<&1 ; then
     git config --global --add safe.directory /usr/local/sbin > /dev/null 2<&1
     git config --global --add safe.directory /usr/local/bin > /dev/null 2<&1
@@ -54,7 +56,10 @@ sudo git reset --hard origin/master
 sudo git stash pop
 
 echo ======================================================================================
+#if [ "${pgit}" == "kn2tod" ]; then
+#   sudo pistar-upgrade
+#fi
 #rpi-ro
 if [ "$fs" == "ro" ]; then
-  sudo mount -o remount,ro / ; sudo mount -o remount,ro /boot
+  sudo mount -o remount,ro / # sudo mount -o remount,ro /boot
 fi
